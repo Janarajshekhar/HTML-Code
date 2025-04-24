@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>table using div</title>
+    <style>
+        .A{
+            position: relative;
+            border: 5px solid;
+            width: 50%;
+            height: 50%;
+            text-align: center;
+        }
+        .block1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 33.33%;
+            height: 66.67%;
+        }
+        .block2{
+            position: absolute;
+            top: 0;
+            left: 33.33%;
+            width: 66.67%;
+            height: 33.33%;
+        }
+        .block3{
+            position: absolute;
+            top: 33.33%;
+            left: 33.33%;
+            width: 33.33%;
+            height: 33.33%;
+        }
+        .block4{
+            position: absolute;
+            top: 66.66%;
+            left: 0;
+            width: 66.66%;
+            height: 33.33%;
+        }
+        .block5{
+            position: absolute;
+            top: 33.33%;
+            left: 66.67%;
+            width: 33.33%;
+            height: 66.66%;
+        }
+        .block1, .block2, .block3, .block4, .block5{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="A">
+        <div class="block1">block1</div>
+        <div class="block2">block2</div>
+        <div class="block3">block3</div>
+        <div class="block4">block4</div>
+        <div class="block5">block5</div>
+    </div>
+</body>
+</html>

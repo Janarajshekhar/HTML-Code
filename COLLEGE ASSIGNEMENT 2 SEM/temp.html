@@ -3,6 +3,10 @@
 <head>
     <title>Block level & Inline elements in HTML</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
         h1 {
             text-align: center;
             color: #1a1a1a;
@@ -19,11 +23,10 @@
             text-align: center;
             font-weight: bold;
             text-decoration: underline;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .block-elements div {
-            width: 250px;
             padding: 10px;
             margin: 5px 0;
             text-align: center;
@@ -37,10 +40,15 @@
         .block-elements .text5 { background-color: #2196f3; }
         .block-elements .text6 { background-color: #e91e63; }
 
+        .inline-wrapper {
+            text-align: center; /* 🔧 Centers contents inside this div */
+        }
+
         .inline-elements {
-            display: flex;
+            display: inline-flex; /* 🔧 Changed from flex to inline-flex */
             gap: 10px;
             flex-wrap: wrap;
+            justify-content: center; /* 🔧 Ensures wrapping lines are also centered */
         }
 
         .inline-elements span {
@@ -54,11 +62,6 @@
         .inline-elements .text4 { background-color: #4caf50; }
         .inline-elements .text5 { background-color: #2196f3; }
         .inline-elements .text6 { background-color: #e91e63; }
-
-        .block-elements , .inline-elements{
-            border: 3px solid;
-            padding: 4px;
-        }
     </style>
 </head>
 <body>
@@ -66,6 +69,7 @@
     <h1>Block level & Inline elements in <b>HTML</b></h1>
 
     <div class="container">
+        <!-- Block-level Elements -->
         <div>
             <div class="section-title">Block-level Elements</div>
             <div class="block-elements">
@@ -78,7 +82,8 @@
             </div>
         </div>
 
-        <div>
+        <!-- Inline Elements -->
+        <div class="inline-wrapper"> <!-- 🔧 Wrapper added to center inline elements -->
             <div class="section-title">Inline Elements</div>
             <div class="inline-elements">
                 <span class="text1">Text 1</span>

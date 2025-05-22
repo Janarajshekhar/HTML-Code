@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>The Dental Hygiene Association</title>
@@ -16,28 +17,52 @@
         .B {
             padding-left: 25px;
         }
+        .nav-link {
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .nav-link a {
+            color: blue;
+            font-size: 16px;
+        }
+        .nav-link a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <table>
         <tr>
-            <td colspan="1"><img src="dental.jpg" width="50px" alt="Dental Logo"></td>
-            <td colspan="5" class="A">
-                <h1>The Dental Hygiene Association</h1>
+            <td style="width: 60px; text-align: center; vertical-align: middle;">
+                <img src="dental.jpg" width="50px" alt="Dental Logo">
+            </td>
+            <td colspan="5" style="text-align: center;">
+                <h1 style="margin: 0; font-size: 32px;">The Dental Hygiene Association</h1>
             </td>
         </tr>
-        <tr class="A">
-            <td><a href="#">Home</a></td>
-            <td><a href="#">Adults</a></td>
-            <td><a href="#">Kids</a></td>
-            <td><a href="#">News</a></td>
-            <td><a href="#">FAQ</a></td>
-            <td><a href="#">Glossary</a></td>
+
+        <tr class="nav-row">
+            <td colspan="6">
+                <table width="100%">
+                    <tr class="A">
+                        <td class="nav-link"><a href="#">Home</a></td>
+                        <td class="nav-link"><a href="#">Adults</a></td>
+                        <td class="nav-link"><a href="#">Kids</a></td>
+                        <td class="nav-link"><a href="#">News</a></td>
+                        <td class="nav-link"><a href="#">FAQ</a></td>
+                        <td class="nav-link"><a href="#">Glossary</a></td>
+                    </tr>
+                </table>
+            </td>
         </tr>
+
         <tr><td colspan="6"><br></td></tr>
+
         <tr class="color">
             <td colspan="6" class="A"><h4>Kids</h4></td>
         </tr>
+
         <tr class="color">
             <td colspan="3" class="B">
                 Bringing up your child with proper attention to their oral health is a <br>
@@ -54,9 +79,10 @@
                 brushing in your child's life.
             </td>
             <td colspan="3">
-                <img src="my_dental.jpg" width="350px" alt="Dental Care for Kids">
+                <img src="my_dental.jpg" width="350px" alt="Child learning dental hygiene">
             </td>
         </tr>
+
         <tr class="color">
             <td colspan="6"><br><hr color="black"></td>
         </tr>

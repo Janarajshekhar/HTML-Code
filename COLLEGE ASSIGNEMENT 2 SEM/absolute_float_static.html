@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        .A{
+            position: absolute;
+            background-color: red;
+            color: white;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+        }
+        .absolute{
+            width: 400px;
+            height: 50px;
+            text-align: center;
+            line-height:45px;
+            border: 2px solid;
+            border-color: brown;
+        }
+        .main{
+            width: 400px;
+            height: 150px;
+            display: flex;
+            justify-content: space-between;
+            padding: 3px;
+        }
+        .B{
+            background-color: blue;
+        }
+        .float{
+            width: 100px;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+        }
+        .C{
+            background-color: blue;
+        }
+        .floatleft{
+            width: 186px;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+        }
+        .D{
+            background-color: #1ce15a;
+        }
+        .floatright{
+            width: 100px;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+        }
+        .E{
+            background-color: #a115a1;
+        }
+        .static{
+            width: 400px;
+            height: 50px;
+            text-align: center;
+            line-height:45px;
+            border: 2px solid;
+            border-color: #9e199e;
+        }
+        .first{
+            border: 2px solid;
+            border-color: blue;
+        }
+        .second{
+            border: 2px solid;
+            border-color: blue;
+        }
+        .third{
+            border: 2px solid;
+            border-color: #0ed20e;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="A">3</div>
+        <div class="absolute">position:absolute</div>
+    </div>
+    <div class="main">
+        <div class="first">
+            <div class="A B">1</div>
+            <div class="float">float:left</div>
+        </div>
+        <div class="second">
+            <div class="A C">2</div>
+            <div class="floatleft">float:left</div>
+        </div>
+        <div class="third">
+            <div class="A D">4</div>
+            <div class="floatright">float:right</div>
+        </div>
+    </div>
+    <div>
+        <div class="A E">5</div>
+        <div class="static">position:static</div>
+    </div>
+</body>
+</html>

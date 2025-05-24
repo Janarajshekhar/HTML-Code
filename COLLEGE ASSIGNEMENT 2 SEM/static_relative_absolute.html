@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        .main{
+            border: 2px;
+            border-style: dotted;
+            width: 409px;
+            height: 109px;
+            display: flex;
+        }
+        .A{
+            background-color: red;
+            width: 100px;
+            margin: 3px;
+            
+        }
+        .B{
+            background-color: green;
+            width: 100px;
+            margin: 3px;
+        }
+        .static{
+            position: static;
+        }
+        .relative{
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+        .absolute{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 430px;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h4>position:static</h4>
+    <div class="main">
+        <div class="A">one</div>
+        <div class="B static">two</div>
+        <div class="A">three</div>
+        <div class="A">four</div>
+    </div>
+    <h4>position:relative</h4>
+    <div class="main">
+        <div class="A">one</div>
+        <div class="B relative">two</div>
+        <div class="A">three</div>
+        <div class="A">four</div>
+    </div>
+    <h4>position:absolute</h4>
+    <div class="main">
+        <div class="A">one</div>
+        <div class="B absolute">two</div>
+        <div class="A">three</div>
+        <div class="A">four</div>
+    </div>
+</body>
+</html>

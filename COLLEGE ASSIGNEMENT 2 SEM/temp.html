@@ -1,100 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Block level & Inline elements in HTML</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Position Example</title>
+  <style>
+    .main {
+      background-color: aqua;
+      width: 409px;
+      height: 100px;
+      display: flex;
+      margin-bottom: 40px;
+      position: static; /* default */
+    }
 
-        h1 {
-            text-align: center;
-            color: #1a1a1a;
-        }
+    .A {
+      background-color: red;
+      width: 100px;
+      margin: 3px;
+    }
 
-        .container {
-            display: flex;
-            justify-content: center;
-            gap: 100px;
-            margin-top: 40px;
-        }
+    .B {
+      background-color: green;
+      width: 100px;
+      margin: 3px;
+    }
 
-        .section-title {
-            text-align: center;
-            font-weight: bold;
-            text-decoration: underline;
-            margin-bottom: 20px;
-        }
+    .static {
+      position: static;
+    }
 
-        .block-elements div {
-            padding: 10px;
-            margin: 5px 0;
-            text-align: center;
-            color: black;
-        }
+    .relative {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      z-index: 1;
+    }
 
-        .block-elements .text1 { background-color: #f44336; }
-        .block-elements .text2 { background-color: #ff9800; }
-        .block-elements .text3 { background-color: #ffeb3b; }
-        .block-elements .text4 { background-color: #4caf50; }
-        .block-elements .text5 { background-color: #2196f3; }
-        .block-elements .text6 { background-color: #e91e63; }
+    .absolute {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      z-index: 1;
+    }
 
-        .inline-wrapper {
-            text-align: center; /* 🔧 Centers contents inside this div */
-        }
-
-        .inline-elements {
-            display: inline-flex; /* 🔧 Changed from flex to inline-flex */
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center; /* 🔧 Ensures wrapping lines are also centered */
-        }
-
-        .inline-elements span {
-            padding: 10px;
-            color: black;
-        }
-
-        .inline-elements .text1 { background-color: #f44336; }
-        .inline-elements .text2 { background-color: #ff9800; }
-        .inline-elements .text3 { background-color: #ffeb3b; }
-        .inline-elements .text4 { background-color: #4caf50; }
-        .inline-elements .text5 { background-color: #2196f3; }
-        .inline-elements .text6 { background-color: #e91e63; }
-    </style>
+    .main-absolute {
+      position: relative; /* important: new context for absolute children */
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Block level & Inline elements in <b>HTML</b></h1>
+  <h4>position: static</h4>
+  <div class="main">
+    <div class="A">one</div>
+    <div class="B static">two</div>
+    <div class="A">three</div>
+    <div class="A">four</div>
+  </div>
 
-    <div class="container">
-        <!-- Block-level Elements -->
-        <div>
-            <div class="section-title">Block-level Elements</div>
-            <div class="block-elements">
-                <div class="text1">Text 1</div>
-                <div class="text2">Text 2</div>
-                <div class="text3">Text 3</div>
-                <div class="text4">Text 4</div>
-                <div class="text5">Text 5</div>
-                <div class="text6">Text 6</div>
-            </div>
-        </div>
+  <h4>position: relative</h4>
+  <div class="main">
+    <div class="A">one</div>
+    <div class="B relative">two</div>
+    <div class="A">three</div>
+    <div class="A">four</div>
+  </div>
 
-        <!-- Inline Elements -->
-        <div class="inline-wrapper"> <!-- 🔧 Wrapper added to center inline elements -->
-            <div class="section-title">Inline Elements</div>
-            <div class="inline-elements">
-                <span class="text1">Text 1</span>
-                <span class="text2">Text 2</span>
-                <span class="text3">Text 3</span>
-                <span class="text4">Text 4</span>
-                <span class="text5">Text 5</span>
-                <span class="text6">Text 6</span>
-            </div>
-        </div>
-    </div>
+  <h4>position: absolute</h4>
+  <div class="main main-absolute">
+    <div class="A">one</div>
+    <div class="B absolute">two</div>
+    <div class="A">three</div>
+    <div class="A">four</div>
+  </div>
 
 </body>
 </html>

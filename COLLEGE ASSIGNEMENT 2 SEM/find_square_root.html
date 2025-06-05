@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Find square root</title>
+</head>
+<body>
+    <h2>FIND SQUARE ROOT</h2>
+    <label for="number">Enter a number :</label>
+    <input type="number" id="number">
+    <button onclick="findSquareRoot()">Calculate</button>
+    <p id="result"></p>
+</body>
+<script>
+    function findSquareRoot(){
+        let num=document.getElementById("number").value;
+        if(num<0){
+            document.getElementById("result").innerText="Cannot find square root";
+        }
+        else{
+            let sqrt = Math.sqrt(num);
+            document.getElementById("result").innerText="Square root = "+sqrt;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Convert Km to Miles</title>
+</head>
+<body>
+    <h2>Convert Km to Miles</h2>
+    <label for="number">Enter distance in Kilometers :</label>
+    <input type="number" name="" id="km">
+    <button onclick="kmToMiles()">Convert Miles</button>
+    <p id="result"></p>
+</body>
+<script>
+    function kmToMiles(){
+        let km = document.getElementById("km").value;
+        if(isNaN(km) || km <0){
+            document.getElementById("result").innerText="Enter valid positive number";
+        }
+        else{
+            let miles = km*0.621371;
+            document.getElementById("result").innerText=km+" km = "+miles+" miles";
+        }
+    }
+</script>
+</html>
